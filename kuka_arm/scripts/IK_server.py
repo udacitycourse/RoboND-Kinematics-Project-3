@@ -232,7 +232,7 @@ def handle_calculate_IK(req):
                     theta4 = np.float64(atan2(R3_6[2,2], -R3_6[0,2]))
                     theta6 = np.float64(atan2(-R3_6[1,1], R3_6[1,0]))
             else:
-                theta6 = prev_angles[5]
+                theta6 = save_theta[5]
                 if R3_6[1,2] == 1:
                     theta5 = np.float64(0)
                     theta4 = np.float64(-theta6 + atan2(-R3_6[0,1], -R3_6[2,1]))
